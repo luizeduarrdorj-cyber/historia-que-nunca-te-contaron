@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Vida Secreta de los Humanos Antiguos</title>
+<meta name="description" content="La serie animada que no está en la página: 10 temporadas y 36 episodios inéditos sobre la verdadera vida de los humanos antiguos. Bonos incluidos. Garantía de 30 días.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --n1:#c2410c;--n2:#ea7a2b;--n3:#f8c58f;
+  --verde:#4d7c0f;--verde2:#3f6a0b;
+  --amarillo:#ffe14d;--rojo:#dc2626;
+  --texto:#24262c;--suave:#5c6170;
+  --gris:#f4f4f5;--borde:#e4e4e7;
+  --oscuro:#111214;--oscuro2:#1c1d21;--oscuro3:#2a2c31;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',system-ui,sans-serif;color:var(--texto);background:#fff;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+svg{display:block}
+a{color:inherit}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 16px}
+h1,h2,h3,h4{font-family:'Fredoka',sans-serif;line-height:1.15}
+.center{text-align:center}
+.sec{padding:72px 0}
+.kicker{display:inline-block;background:#fff1e6;color:var(--n1);font-weight:900;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:999px;margin-bottom:12px}
+.h2{font-size:clamp(1.7rem,3.6vw,2.5rem);margin-bottom:12px}
+.lead{color:var(--suave);font-size:1.08rem;max-width:720px;margin:0 auto}
+mark{background:linear-gradient(transparent 55%,#ffe14d 55%);color:inherit;padding:0 2px}
+
+/* barra urgencia */
+.urg{background:var(--oscuro);color:#fff;font-size:.88rem;text-align:center;padding:8px 12px;font-weight:700}
+.urg b{color:var(--amarillo)}
+
+header{background:#fff;border-bottom:1px solid var(--borde);position:sticky;top:0;z-index:30}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{font-family:'Fredoka',sans-serif;font-weight:700;font-size:1.15rem;color:var(--verde);text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo i{font-style:normal;font-size:1.3rem}
+.login{font-size:.85rem;color:var(--verde);text-decoration:none;font-weight:800}
+
+.btn{display:inline-block;background:var(--verde);color:#fff;text-decoration:none;font-weight:900;font-size:1.05rem;padding:15px 30px;border-radius:999px;box-shadow:0 6px 0 #2f4f07;transition:transform .15s,background .15s;text-align:center}
+.btn:hover{background:var(--verde2);transform:translateY(-2px)}
+.btn:active{transform:translateY(3px);box-shadow:0 3px 0 #2f4f07}
+.btn.xl{font-size:1.2rem;padding:19px 40px}
+.btn small{display:block;font-weight:700;font-size:.78rem;opacity:.9}
+.mini{font-size:.85rem;margin-top:12px;opacity:.85}
+
+/* HERO */
+.hero{background:linear-gradient(180deg,var(--n1) 0%,var(--n2) 60%,var(--n3) 100%);color:#1b0f06;overflow:hidden;padding:48px 0 0}
+.hero .wrap{text-align:center}
+.hero .tag{display:inline-block;background:rgba(0,0,0,.18);color:#fff;font-weight:900;font-size:.8rem;letter-spacing:.06em;padding:6px 14px;border-radius:999px;margin-bottom:16px;text-transform:uppercase}
+.hero h1{font-size:clamp(2rem,5.2vw,3.5rem);color:#16110c;max-width:900px;margin:0 auto}
+.hero h1 em{font-style:normal;color:#fff;-webkit-text-stroke:0;text-shadow:0 3px 0 rgba(0,0,0,.25)}
+.hero .sub{font-size:clamp(1.05rem,2.3vw,1.35rem);margin:18px auto 26px;max-width:720px;font-weight:700;color:#2b1708}
+.hero-cta{margin-bottom:34px}
+.hero-dev{position:relative;max-width:900px;margin:0 auto}
+
+/* LAPTOP */
+.laptop{position:relative;margin:0 auto;width:100%;max-width:860px}
+.screen{background:#0b0b0d;border-radius:18px 18px 0 0;padding:14px 14px 10px;border:2px solid #2b2b30;box-shadow:0 30px 60px rgba(0,0,0,.35)}
+.screen .cam{width:8px;height:8px;border-radius:50%;background:#333;margin:0 auto 8px}
+.base{height:18px;background:linear-gradient(#d6d6da,#a9a9ae);border-radius:0 0 22px 22px;margin:0 -5%;position:relative}
+.base::before{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:16%;height:7px;background:#8f8f95;border-radius:0 0 10px 10px}
+
+/* APP (área de miembros) */
+.app{background:var(--oscuro);color:#fff;border-radius:6px;overflow:hidden;text-align:left;font-size:12px}
+.app-top{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:linear-gradient(#000,transparent)}
+.app-top .lg{font-family:'Fredoka';font-weight:700;color:var(--n2);font-size:14px}
+.app-top nav{display:flex;gap:14px;color:#c9c9cf;font-weight:700}
+.app-top nav b{color:#fff}
+.avatar{width:24px;height:24px;border-radius:6px;background:var(--n2)}
+.banner{position:relative;height:200px;background:linear-gradient(90deg,#120a04 0%,rgba(18,10,4,.6) 45%,rgba(18,10,4,0) 70%),linear-gradient(180deg,#7c2d12,#ea7a2b 60%,#e9c08b 60%,#d6a568);display:flex;align-items:center;padding:0 22px;overflow:hidden}
+.banner .info{position:relative;z-index:2;max-width:55%}
+.banner .ep{font-size:10px;color:var(--amarillo);font-weight:900;letter-spacing:.08em}
+.banner h4{font-size:22px;margin:4px 0 6px}
+.banner p{color:#ddd;font-size:11px;margin-bottom:10px}
+.banner .acts{display:flex;gap:8px}
+.banner .acts span{background:#fff;color:#000;font-weight:900;padding:6px 12px;border-radius:5px;font-size:11px}
+.banner .acts span+span{background:rgba(255,255,255,.2);color:#fff}
+.banner svg.fig{position:absolute;right:6%;bottom:-6px;height:118%}
+.prog{height:3px;background:#444;border-radius:3px;margin-top:10px;width:160px}
+.prog i{display:block;height:100%;width:62%;background:var(--n2);border-radius:3px}
+.row{padding:10px 14px 4px}
+.row h5{font-family:'Fredoka';font-size:13px;margin-bottom:6px;display:flex;justify-content:space-between}
+.row h5 small{color:#9a9aa3;font-family:'Nunito';font-weight:700}
+.cards{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.card{border-radius:6px;overflow:hidden;background:var(--oscuro2)}
+.thumb{position:relative;aspect-ratio:16/9;overflow:hidden}
+.thumb svg.f{position:absolute;bottom:-4%;left:8%;height:92%}
+.thumb .prop{position:absolute;right:10%;bottom:14%;font-size:1.6em;filter:drop-shadow(0 2px 2px rgba(0,0,0,.4))}
+.thumb img.real{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.thumb .n{z-index:2;position:absolute;top:4px;left:5px;background:rgba(0,0,0,.6);font-size:9px;font-weight:900;padding:1px 5px;border-radius:3px}
+.thumb .lock{position:absolute;top:4px;right:5px;font-size:10px}
+.card p{font-size:10px;font-weight:700;padding:5px 6px 7px;line-height:1.25;color:#e6e6ea}
+.done .thumb::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:100%;background:var(--n2)}
+
+/* fondos de escenas */
+.bg1{background:linear-gradient(180deg,#1e3a8a,#3b82f6 60%,#a16207 60%,#854d0e)}
+.bg2{background:linear-gradient(180deg,#0f172a,#1e293b 60%,#3f3f46 60%,#27272a)}
+.bg3{background:linear-gradient(180deg,#7c2d12,#ea580c 60%,#d6a568 60%,#b4874f)}
+.bg4{background:linear-gradient(180deg,#14532d,#22c55e 60%,#365314 60%,#3f6212)}
+.bg5{background:linear-gradient(180deg,#4c1d95,#7c3aed 60%,#1f2937 60%,#111827)}
+.bg6{background:linear-gradient(180deg,#bae6fd,#e0f2fe 60%,#f8fafc 60%,#e2e8f0)}
+.bg7{background:linear-gradient(180deg,#78350f,#b45309 60%,#57534e 60%,#44403c)}
+.bg8{background:linear-gradient(180deg,#9f1239,#f43f5e 60%,#d6a568 60%,#b4874f)}
+.bg9{background:linear-gradient(180deg,#0c4a6e,#0ea5e9 60%,#155e75 60%,#164e63)}
+.bg10{background:linear-gradient(180deg,#1c1917,#44403c 60%,#292524 60%,#1c1917)}
+
+
+/* PLAYER dentro del portátil */
+.player{display:grid;grid-template-columns:1fr 210px;gap:12px;padding:6px 14px 14px}
+.pl-video{position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden}
+.pl-fig{position:absolute;left:50%;transform:translateX(-50%);bottom:-4%;height:86%}
+.pl-prop{position:absolute;right:18%;bottom:18%;font-size:3.4em}
+.pl-ctrl{z-index:2;position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;gap:10px;padding:8px 10px;background:linear-gradient(transparent,rgba(0,0,0,.75));font-weight:800;font-size:11px}
+.pl-bar{flex:1;height:4px;background:#555;border-radius:4px;overflow:hidden}
+.pl-bar i{display:block;height:100%;width:56%;background:var(--n2)}
+.pl-info{padding:10px 2px 0}
+.pl-info b{color:var(--n2);font-size:10px;letter-spacing:.06em;text-transform:uppercase}
+.pl-info h4{font-size:16px;margin:2px 0 8px}
+.pl-prog{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;color:#bbb;font-size:10px;font-weight:700}
+.pl-side{background:var(--oscuro2);border-radius:8px;padding:10px}
+.pl-side h5{font-family:'Fredoka';font-size:13px;margin-bottom:8px}
+.mat{display:flex;align-items:center;gap:8px;background:var(--oscuro3);border-radius:6px;padding:7px 8px;margin-bottom:6px}
+.mat span{font-size:16px}
+.mat div{flex:1;line-height:1.2}
+.mat b{display:block;font-size:11px}
+.mat small{color:#9a9aa3;font-size:9px}
+.mat em{font-style:normal;color:var(--n2);font-weight:900}
+.mat.vipm{background:linear-gradient(90deg,#4c1d95,#6d28d9)}
+.cert{text-align:center;font-weight:900;font-size:11px;color:var(--amarillo);margin-top:8px}
+@media (max-width:860px){.player{grid-template-columns:1fr}.pl-side{display:none}.pl-prog{grid-template-columns:1fr}}
+
+/* PHONE */
+.phone{position:absolute;right:-12%;bottom:-10px;width:18%;min-width:120px;background:#0b0b0d;border-radius:22px;padding:8px;border:2px solid #2b2b30;box-shadow:0 20px 40px rgba(0,0,0,.4)}
+.phone .app{border-radius:14px;font-size:9px}
+.phone .ph-top{padding:8px 8px 4px;font-family:'Fredoka';color:var(--n2);font-weight:700}
+.phone .ph-hero{aspect-ratio:9/12;position:relative;overflow:hidden}
+.phone .ph-hero svg{position:absolute;left:50%;transform:translateX(-50%);bottom:-4%;height:80%}
+.phone .ph-t{padding:6px 8px 8px}
+.phone .ph-t b{display:block;font-size:10px}
+.phone .ph-t span{color:#aaa}
+
+/* SELLOS bajo hero */
+.chips{background:#fff;border-bottom:1px solid var(--borde)}
+.chips .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:26px 16px}
+.chip{text-align:center}
+.chip b{display:block;font-family:'Fredoka';font-size:1.7rem;color:var(--n1)}
+.chip span{font-weight:700;color:var(--suave);font-size:.9rem}
+
+/* DOLOR / PROMESA */
+.pain .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.pain .fig-card{background:linear-gradient(180deg,#1e7ee8,#59b4f5 58%,#4c9a2a 58%,#3f8a22);border-radius:56px;aspect-ratio:3/4;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;max-width:380px;margin:0 auto;width:100%}
+.pain h2{font-size:clamp(1.6rem,3.2vw,2.2rem);margin-bottom:14px}
+.pain p{margin-bottom:12px;font-size:1.05rem}
+.pain .list{list-style:none;display:grid;gap:8px;margin:16px 0}
+.pain .list li{background:var(--gris);border-radius:12px;padding:10px 14px 10px 42px;position:relative;font-weight:700}
+.pain .list li::before{content:"❓";position:absolute;left:12px;top:9px}
+
+
+.pain .list.descubre li::before{content:"🦴"}
+.sellos-i{display:grid;gap:8px;margin-top:14px}
+.sellos-i span{background:#fff7e6;border:1px solid #f3d9a8;border-radius:12px;padding:8px 14px;font-weight:800}
+
+/* VIDEO */
+.video-box{position:relative;max-width:760px;margin:24px auto 0;aspect-ratio:16/9;border-radius:22px;overflow:hidden;background:linear-gradient(180deg,var(--n1),var(--n2) 60%,#e8c79a 60%,#d9b27c);box-shadow:0 16px 36px rgba(0,0,0,.18)}
+.video-box iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-title{position:absolute;top:7%;left:0;right:0;font-family:'Fredoka';font-weight:700;font-size:clamp(1.8rem,6vw,3.6rem);color:var(--amarillo);-webkit-text-stroke:2px #222;text-shadow:0 4px 0 #222;text-align:center}
+.play{z-index:2;position:absolute;left:50%;top:60%;transform:translate(-50%,-50%);width:78px;height:78px;border-radius:50%;background:rgba(255,255,255,.88);border:none;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.play::after{content:"";border-left:24px solid #333;border-top:15px solid transparent;border-bottom:15px solid transparent;margin-left:6px}
+
+/* COMPARACIÓN */
+.compare{background:var(--gris)}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:860px;margin:28px auto 0}
+.cmp .col{border-radius:18px;padding:22px;background:#fff;border:1px solid var(--borde)}
+.cmp .col.pro{border:3px solid var(--verde);box-shadow:0 10px 24px rgba(77,124,15,.15)}
+.cmp h3{font-size:1.2rem;margin-bottom:10px}
+.cmp ul{list-style:none;display:grid;gap:8px}
+.cmp li{padding-left:28px;position:relative}
+.cmp .con li::before{content:"✖";color:#a1a1aa;position:absolute;left:4px}
+.cmp .pro li::before{content:"✔";color:var(--verde);font-weight:900;position:absolute;left:4px}
+
+/* CATÁLOGO */
+.catalogo{background:var(--oscuro);color:#fff}
+.catalogo .lead{color:#b4b4bb}
+.catalogo .kicker{background:rgba(234,122,43,.15);color:var(--n2)}
+.temp{margin-top:34px}
+.temp-h{display:flex;align-items:baseline;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+.temp-h .t{font-family:'Fredoka';color:var(--n2);font-weight:700;font-size:.9rem;letter-spacing:.06em}
+.temp-h h3{font-size:1.35rem}
+.temp-h p{color:#a1a1aa;font-size:.95rem;width:100%}
+.cat-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cat-cards .card p{font-size:.85rem;padding:8px 10px 10px}
+.cat-cards .thumb img.real{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.thumb .n{z-index:2;font-size:.7rem}
+.cat-cards .thumb .prop{font-size:2.2rem}
+.mas{display:none}
+.catalogo.abierto .mas{display:block}
+.ver{margin-top:30px;text-align:center}
+.ver button{background:transparent;border:2px solid #fff;color:#fff;font-weight:900;padding:12px 26px;border-radius:999px;cursor:pointer;font-family:inherit;font-size:1rem}
+
+/* BONOS */
+.bonos-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:30px}
+.bono{display:flex;gap:16px;border:2px dashed var(--n3);border-radius:20px;padding:18px;background:#fffaf4;align-items:flex-start}
+.bono .mock{flex:0 0 96px;height:120px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:2.4rem;color:#fff;box-shadow:6px 6px 0 rgba(0,0,0,.12);position:relative}
+.bono .mock small{position:absolute;bottom:6px;left:6px;right:6px;font-size:.6rem;font-weight:900;text-align:center;line-height:1.1}
+.bono .lbl{font-weight:900;color:var(--n1);font-size:.78rem;letter-spacing:.06em}
+.bono h3{font-size:1.15rem;margin:2px 0 6px}
+.bono p{color:var(--suave);font-size:.95rem}
+.bono .val{margin-top:6px;font-weight:900}
+.bono .val s{color:#a1a1aa;margin-right:6px}
+
+
+/* BONO VIP */
+.reloj{display:inline-block;background:rgba(0,0,0,.3);border-radius:10px;padding:6px 12px;font-weight:900;margin-bottom:10px;font-variant-numeric:tabular-nums}
+.vipbox{margin:26px auto 0;max-width:900px;border-radius:24px;background:linear-gradient(135deg,#1e1b4b,#4c1d95);color:#fff;padding:6px;box-shadow:0 18px 40px rgba(76,29,149,.35)}
+.vip-tag{background:var(--amarillo);color:#1b1300;font-weight:900;font-size:.82rem;letter-spacing:.04em;text-align:center;padding:8px 12px;border-radius:18px 18px 0 0}
+.vip-in{display:flex;gap:22px;padding:24px;align-items:flex-start}
+.vip-mock{flex:0 0 130px;height:170px;border-radius:10px;background:linear-gradient(160deg,#f59e0b,#b45309);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:8px 8px 0 rgba(0,0,0,.25);position:relative;border:3px solid #fde68a}
+.vip-mock span{font-size:3.2rem}
+.vip-mock img.real,.fig-card img.real,.video-box img.real,.pl-video img.real,.ph-hero img.real{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit}
+.fig-card{position:relative}
+.vip-mock small{font-weight:900;font-size:.68rem;text-align:center;padding:0 8px;margin-top:6px;line-height:1.15}
+.vipbox h3{font-size:1.45rem;margin-bottom:6px}
+.vipbox p{color:#e0e7ff}
+.vipbox ul{list-style:none;margin:12px 0;display:grid;gap:6px;font-weight:700}
+.cupo{margin:14px 0 8px}
+.cupo-txt{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;font-weight:800;margin-bottom:6px}
+.cupo .alerta{background:#dc2626;color:#fff;border-radius:999px;padding:2px 12px}
+.cupo.pocos .alerta{animation:lat 1s infinite}
+@keyframes lat{50%{transform:scale(1.08)}}
+.asientos{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+.asiento{border:2px dashed #facc15;border-radius:12px;padding:12px 6px;text-align:center;font-weight:900;background:rgba(250,204,21,.12)}
+.asiento.tomado{border-style:solid;border-color:#6b7280;background:#374151;color:#9ca3af}
+.cupo-bar{height:16px;background:rgba(255,255,255,.2);border-radius:99px;overflow:hidden;margin-bottom:6px}
+.cupo-bar i{display:block;height:100%;background:linear-gradient(90deg,#facc15,#f97316);border-radius:99px}
+.vipbox .val{font-weight:900}
+.vipbox .val s{color:#a5b4fc;margin-right:6px}
+.stack li.vip{background:#f5f3ff;margin:0 -22px;padding:12px 22px;border-bottom:1px dashed #ddd6fe}
+.stack li.vip em{font-style:normal;color:#7c3aed;font-size:.85rem}
+@media (max-width:860px){.vip-in{flex-direction:column;align-items:center;text-align:center}.vipbox ul{justify-items:center}}
+
+/* CÓMO FUNCIONA */
+.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.paso{background:#fff;border:1px solid var(--borde);border-radius:18px;padding:22px;text-align:center}
+.paso .i{width:54px;height:54px;border-radius:50%;background:var(--n2);color:#fff;font-family:'Fredoka';font-size:1.5rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
+
+/* CREADOR */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:820px;margin:28px auto 0}
+.stat{border-radius:50%;aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;padding:10px}
+.stat b{font-family:'Fredoka';font-size:clamp(1.4rem,4vw,2.5rem);line-height:1}
+.stat span{font-weight:800;font-size:.9rem;margin-top:6px}
+.s1{background:#e8b93c}.s2{background:#2f6f2a}.s3{background:var(--n1)}
+
+/* PARA QUIÉN */
+.grid-q{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.q{border:2px solid var(--borde);border-radius:18px;padding:22px;text-align:center}
+.q .ico{font-size:2.2rem}
+.q h3{margin:6px 0 4px}
+.q p{color:var(--suave)}
+
+/* OFERTA */
+.oferta{background:linear-gradient(180deg,#fff7ed,#ffedd5)}
+.stack{max-width:780px;margin:28px auto 0;background:#fff;border-radius:22px;border:3px solid var(--verde);overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.08)}
+.stack .head{background:var(--verde);color:#fff;padding:14px 22px;font-family:'Fredoka';font-size:1.2rem;display:flex;align-items:center;gap:10px}
+.stack ul{list-style:none;padding:8px 22px}
+.stack li{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px dashed var(--borde);font-weight:700}
+.stack li span:last-child{white-space:nowrap;color:var(--suave)}
+.stack .total{display:flex;justify-content:space-between;padding:14px 22px;font-weight:900;font-size:1.05rem}
+.stack .total s{color:var(--rojo)}
+.precio-final{text-align:center;padding:10px 22px 28px}
+.precio-final .hoy{font-weight:900;color:var(--suave);letter-spacing:.06em;font-size:.85rem}
+.precio-final .monto{font-family:'Fredoka';font-size:clamp(3.2rem,9vw,4.6rem);font-weight:700;color:var(--texto);line-height:1}
+.precio-final .monto small{font-size:1rem;color:var(--suave);font-family:'Nunito';font-weight:800}
+.precio-final .ahorro{display:inline-block;background:var(--amarillo);font-weight:900;border-radius:999px;padding:5px 14px;margin:10px 0 20px}
+.pagos{font-size:.85rem;color:var(--suave);margin-top:14px}
+.aviso{margin-top:14px;font-weight:800;color:var(--rojo);font-size:.95rem}
+
+/* GARANTÍA */
+.gar{display:flex;gap:26px;align-items:center;max-width:820px;margin:0 auto;background:#f0fdf4;border:2px solid #bbf7d0;border-radius:24px;padding:28px}
+.sello30{flex:0 0 130px;height:130px;border-radius:50%;background:radial-gradient(circle,#16a34a 0 58%,#15803d 58% 64%,#16a34a 64%);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Fredoka';box-shadow:0 8px 18px rgba(22,163,74,.35)}
+.sello30 b{font-size:2.6rem;line-height:1}
+.sello30 span{font-size:.8rem;font-weight:700}
+.gar h2{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:8px}
+
+/* FAQ */
+.faq details{background:#fff;border:1px solid var(--borde);border-radius:14px;max-width:780px;margin:0 auto 10px;padding:15px 18px}
+.faq summary{font-weight:900;cursor:pointer;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";float:right;font-size:1.2rem}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin-top:8px;color:var(--suave)}
+
+.cierre{background:linear-gradient(180deg,var(--n1),var(--n2));color:#fff;text-align:center}
+.cierre h2{font-size:clamp(1.8rem,4vw,2.7rem);margin-bottom:12px}
+.cierre p{font-size:1.1rem;margin-bottom:24px;opacity:.95}
+.cierre .btn{box-shadow:0 6px 0 rgba(0,0,0,.3)}
+
+footer{border-top:1px solid var(--borde);padding:22px 0;font-size:.85rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer nav a{margin-left:14px;text-decoration:none;color:var(--verde)}
+
+.barra{display:none}
+
+@media (max-width:860px){
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .cards .card:nth-child(n+4){display:none}
+  .banner{height:150px}.banner h4{font-size:16px}.banner p{display:none}
+  .phone{display:none}
+  .chips .wrap{grid-template-columns:repeat(2,1fr)}
+  .pain .wrap,.cmp,.bonos-grid,.pasos,.grid-q{grid-template-columns:1fr}
+  .cat-cards{grid-template-columns:repeat(2,1fr)}
+  .gar{flex-direction:column;text-align:center}
+  .barra{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;background:#fff;border-top:1px solid var(--borde);padding:10px 16px;align-items:center;justify-content:space-between;gap:10px;box-shadow:0 -6px 18px rgba(0,0,0,.1)}
+  .barra b{font-family:'Fredoka';font-size:1.35rem}
+  .barra s{color:var(--suave);font-size:.85rem;margin-right:4px}
+  .barra .btn{padding:12px 20px;font-size:.95rem;box-shadow:0 4px 0 #2f4f07}
+  body{padding-bottom:72px}
+}
+@media (max-width:520px){
+  .app{font-size:10px}
+  .app-top nav{display:none}
+  .banner{height:120px;padding:0 12px}.banner h4{font-size:13px}.banner .acts span{padding:4px 8px;font-size:9px}
+  .banner svg.fig{right:2%}
+  .row{padding:8px 8px 2px}
+  .screen{padding:8px 8px 6px;border-radius:12px 12px 0 0}
+  .phone{display:none}
+  .stack li{font-size:.9rem}
+  .stats{gap:8px}
+  .stat{min-width:0;padding:4px}
+  .stat b{font-size:1.15rem}
+  .stat span{font-size:.68rem;text-align:center}
+  .base{margin:0 -2%}
+}
+</style>
+</head>
+<body>
+
+<!-- Personaje reutilizable (cavernícola estilo palito) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+  <symbol id="cav" viewBox="0 0 200 260">
+    <path d="M62 170 L138 170 L152 260 L48 260 Z" fill="#9c6a3a" stroke="#111" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M74 190 l10 12 M110 205 l-8 14 M130 188 l-9 14 M86 232 l8 12" stroke="#6b4422" stroke-width="4" stroke-linecap="round"/>
+    <path d="M100 140 L100 172" stroke="#111" stroke-width="5"/>
+    <path d="M66 180 L40 228" stroke="#111" stroke-width="5" stroke-linecap="round"/>
+    <path d="M134 180 L162 222" stroke="#111" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="100" cy="82" r="60" fill="#fff" stroke="#111" stroke-width="5"/>
+    <path d="M40 78 C 36 36, 80 12, 108 18 C 140 12, 172 42, 162 82 C 154 64, 146 56, 136 52 C 132 64, 124 64, 118 54 C 112 64, 100 64, 98 52 C 90 62, 78 62, 74 52 C 66 64, 54 68, 40 78 Z" fill="#3d3a36" stroke="#111" stroke-width="4" stroke-linejoin="round"/>
+    <circle cx="78" cy="86" r="16" fill="#fff" stroke="#111" stroke-width="4"/>
+    <circle cx="122" cy="86" r="16" fill="#fff" stroke="#111" stroke-width="4"/>
+    <circle cx="83" cy="89" r="6" fill="#111"/>
+    <circle cx="117" cy="89" r="6" fill="#111"/>
+    <path d="M84 116 q16 10 32 0" stroke="#111" stroke-width="5" fill="none" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="cav-wow" viewBox="0 0 200 260">
+    <path d="M62 170 L138 170 L152 260 L48 260 Z" fill="#3f7d3a" stroke="#111" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M100 140 L100 172" stroke="#111" stroke-width="5"/>
+    <path d="M134 180 L196 160" stroke="#111" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="196" cy="160" r="7" fill="#fff" stroke="#111" stroke-width="3"/>
+    <path d="M66 180 L44 232" stroke="#111" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="100" cy="82" r="60" fill="#fff" stroke="#111" stroke-width="5"/>
+    <path d="M40 78 C 36 36, 80 12, 108 18 C 140 12, 172 42, 162 82 C 154 64, 146 56, 136 52 C 132 64, 124 64, 118 54 C 112 64, 100 64, 98 52 C 90 62, 78 62, 74 52 C 66 64, 54 68, 40 78 Z" fill="#3d3a36" stroke="#111" stroke-width="4" stroke-linejoin="round"/>
+    <circle cx="78" cy="88" r="17" fill="#fff" stroke="#111" stroke-width="4"/>
+    <circle cx="122" cy="88" r="17" fill="#fff" stroke="#111" stroke-width="4"/>
+    <circle cx="84" cy="90" r="6" fill="#111"/>
+    <circle cx="128" cy="90" r="6" fill="#111"/>
+    <ellipse cx="102" cy="120" rx="8" ry="11" fill="#7a1d1d" stroke="#111" stroke-width="3"/>
+  </symbol>
+</defs>
+</svg>
+
+<div class="urg">🔥 <b>Lanzamiento:</b> US$27 + Bono VIP de regalo — ¡solo quedan <b class="cupos">3</b> cupos!</div>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#"><i>🦴</i>Garabatos de la Historia</a>
+    <a class="login" href="#">Iniciar sesión</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">🎬 Nueva serie animada · Contenido 100% inédito</span>
+    <h1>La historia que <em>nunca</em> te contaron sobre tus antepasados</h1>
+    <p class="sub">10 temporadas, 36 episodios animados que <u>no están en la página</u> — para que descubras cómo vivían, amaban, curaban y sobrevivían los humanos antiguos.</p>
+    <div class="hero-cta">
+      <a class="btn xl" href="#oferta">¡QUIERO VER LA SERIE AHORA!<small>Preventa de lanzamiento por solo US$27</small></a>
+      <p class="mini">✅ Garantía de 30 días · 📱 Míralo en el celular · ♾️ Acceso de por vida</p>
+    </div>
+
+    <div class="hero-dev">
+      <div class="laptop">
+        <div class="screen">
+          <div class="cam"></div>
+          <div class="app">
+            <div class="app-top">
+              <span class="lg">🦴 Garabatos+</span>
+              <nav><b>Inicio</b><span>Temporadas</span><span>Bonos</span><span>Mi lista</span></nav>
+              <span class="avatar"></span>
+            </div>
+            <div class="player">
+              <div class="pl-main">
+                <div class="pl-video bg3">
+                  <svg viewBox="0 0 200 260" class="pl-fig"><use href="#cav-wow"/></svg>
+                  <span class="pl-prop">🔥</span><img class="real" src="img/t1.jpg" alt="" onerror="this.remove()">
+                  <div class="pl-ctrl"><span>❚❚</span><div class="pl-bar"><i></i></div><span>04:12 / 07:30</span><span>⛶</span></div>
+                </div>
+                <div class="pl-info">
+                  <b>Reproduciendo ahora</b>
+                  <h4>Temporada 1 · El primer fuego</h4>
+                  <div class="pl-prog"><span>Tu progreso en el curso</span><div class="pl-bar"><i style="width:18%"></i></div><small>7 de 36 episodios</small></div>
+                </div>
+              </div>
+              <aside class="pl-side">
+                <h5>📥 Tus materiales</h5>
+                <div class="mat"><span>📖</span><div><b>Atlas ilustrado</b><small>PDF · 64 págs</small></div><em>⬇</em></div>
+                <div class="mat"><span>🗺️</span><div><b>Línea del tiempo</b><small>Póster para imprimir</small></div><em>⬇</em></div>
+                <div class="mat"><span>✏️</span><div><b>Kit familia y aula</b><small>Fichas y juegos</small></div><em>⬇</em></div>
+                <div class="mat"><span>🔒</span><div><b>Episodio secreto</b><small>Desbloqueado</small></div><em>▶</em></div>
+                <div class="mat vipm"><span>📜</span><div><b>Biblia para niños</b><small>Bono VIP</small></div><em>▶</em></div>
+                <div class="cert">🏅 Certificado al terminar</div>
+              </aside>
+            </div>
+          </div>
+        </div>
+        <div class="base"></div>
+      </div>
+      <div class="phone">
+        <div class="app">
+          <div class="ph-top">🦴 Garabatos+</div>
+          <div class="ph-hero bg5"><svg viewBox="0 0 200 260"><use href="#cav"/></svg><span style="position:absolute;top:14%;right:16%;font-size:2em">✨</span><img class="real" src="img/t6.jpg" alt="" onerror="this.remove()"></div>
+          <div class="ph-t"><b>Leer las estrellas</b><span>T6 · Ep 1 · 6 min</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NÚMEROS -->
+<section class="chips">
+  <div class="wrap">
+    <div class="chip"><b>10</b><span>temporadas</span></div>
+    <div class="chip"><b>36</b><span>episodios inéditos</span></div>
+    <div class="chip"><b>+3 h</b><span>de contenido animado</span></div>
+    <div class="chip"><b>5</b><span>bonos exclusivos</span></div>
+  </div>
+</section>
+
+
+<!-- ¿ALGUNA VEZ TE PREGUNTASTE? -->
+<section class="sec pain" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="fig-card" style="background:linear-gradient(180deg,#1e7ee8,#59b4f5 58%,#4c9a2a 58%,#3f8a22)"><svg viewBox="0 0 200 260" style="width:80%"><use href="#cav-wow"/></svg><img class="real" src="img/intro2.jpg" alt="" onerror="this.remove()"></div>
+    <div>
+      <h2>🔍 ¿Alguna vez te preguntaste cómo era la vida de verdad hace 50.000 años?</h2>
+      <p>🌟 Revelamos 10 de los aspectos más fascinantes —y en gran parte desconocidos— de la vida humana en la antigüedad.</p>
+      <p><b>🎥 Lo que vas a descubrir:</b></p>
+      <ul class="list descubre">
+        <li>Qué hacían realmente los humanos antiguos por la noche</li>
+        <li>A qué le tenían más miedo</li>
+        <li>Cómo se comunicaban</li>
+        <li>Qué comían</li>
+        <li>Qué tan fuertes eran en realidad</li>
+        <li>Cuándo empezaron a tener mascotas</li>
+        <li>Qué los cazaba</li>
+        <li>Si llegaron a encontrarse con los neandertales</li>
+        <li>Qué creían sobre las estrellas</li>
+        <li>Por qué dibujaban en las paredes de las cuevas</li>
+      </ul>
+      <div class="sellos-i">
+        <span>⏱ 10 módulos, más de 3 horas de contenido</span>
+        <span>📄 Guía PDF exclusiva incluida</span>
+        <span>✅ Garantía de reembolso de 30 días</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOLOR -->
+<section class="sec pain">
+  <div class="wrap">
+    <div class="fig-card"><svg viewBox="0 0 200 260" style="width:80%"><use href="#cav-wow"/></svg><img class="real" src="img/intro.jpg" alt="" onerror="this.remove()"></div>
+    <div>
+      <span class="kicker">La verdad incómoda</span>
+      <h2>En la escuela te enseñaron fechas.<br><mark>Nadie te contó cómo vivían de verdad.</mark></h2>
+      <p>Te dijeron que eran “cavernícolas” que gruñían y cazaban mamuts. Pero la ciencia descubrió algo muy distinto:</p>
+      <ul class="list">
+        <li>¿Cómo curaban heridas y hasta operaban el cráneo… sin anestesia?</li>
+        <li>¿Cómo se comunicaban antes de que existieran las palabras?</li>
+        <li>¿Por qué hubo un momento en que casi nos extinguimos?</li>
+        <li>¿Qué veían en las estrellas que nosotros olvidamos?</li>
+      </ul>
+      <p><b>Tus antepasados eran mucho más inteligentes de lo que imaginas.</b> Y en esta serie vas a conocerlos como nunca antes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section class="sec center" style="padding-top:0">
+  <div class="wrap">
+    <span class="kicker">Mira el tráiler</span>
+    <h2 class="h2">¡Bienvenido! ❤️</h2>
+    <p class="lead">Dale play y descubre en 1 minuto todo lo que te espera dentro.</p>
+    <div class="video-box">
+      <!-- Para poner tu video: borra el título, la figura y el botón, y pega aquí el iframe de YouTube/Vimeo -->
+      <div class="video-title">¿VIDA ANTIGUA?</div>
+      <svg viewBox="0 0 200 260" style="position:absolute;left:50%;bottom:0;transform:translateX(-50%);height:62%"><use href="#cav"/></svg>
+      <img class="real" src="img/trailer.jpg" alt="" onerror="this.remove()">
+      <button class="play" aria-label="Ver tráiler"></button>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARACIÓN -->
+<section class="sec compare center">
+  <div class="wrap">
+    <span class="kicker">¿Ya me sigues en la página?</span>
+    <h2 class="h2">Esto NO es lo que ya viste en Facebook</h2>
+    <p class="lead">Los videos de la página son solo una probadita. La serie es la historia completa, con temas que nunca vas a ver publicados.</p>
+    <div class="cmp" style="text-align:left">
+      <div class="col con">
+        <h3>📱 En la página</h3>
+        <ul>
+          <li>Videos de 1 minuto</li>
+          <li>Un dato suelto por video</li>
+          <li>Temas al azar, sin orden</li>
+          <li>Se pierden en el feed</li>
+        </ul>
+      </div>
+      <div class="col pro">
+        <h3>🎬 En la serie</h3>
+        <ul>
+          <li>36 episodios completos e inéditos</li>
+          <li>Historias con principio, giro y final</li>
+          <li>10 temporadas organizadas, como en Netflix</li>
+          <li>Guías PDF, línea del tiempo y material extra</li>
+          <li>Acceso de por vida, cuando quieras</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATÁLOGO -->
+<section class="sec catalogo center" id="catalogo">
+  <div class="wrap">
+    <span class="kicker">Todo lo que vas a recibir</span>
+    <h2 class="h2">10 temporadas. 36 episodios. Cero relleno.</h2>
+    <p class="lead">Así está organizado por dentro. Cada episodio es una historia animada completa, con el estilo que ya amas.</p>
+    <div id="catalogo-lista" style="text-align:left"></div>
+    <div class="ver"><button id="btn-ver">Ver todas las temporadas ▾</button></div>
+  </div>
+</section>
+
+<!-- BONOS -->
+<section class="sec center">
+  <div class="wrap">
+    <span class="kicker">Solo en el lanzamiento</span>
+    <h2 class="h2">Y además te llevas 5 bonos de regalo 🎁</h2>
+    <div class="bonos-grid" style="text-align:left">
+      <div class="bono">
+        <div class="mock" style="background:linear-gradient(160deg,#ea580c,#9a3412)">📖<small>ATLAS DE LOS HUMANOS ANTIGUOS</small></div>
+        <div><div class="lbl">BONO #1</div><h3>Atlas ilustrado (PDF)</h3><p>Más de 60 páginas con los secretos de cada temporada, mapas y curiosidades para leer y releer.</p><div class="val"><s>US$27</s> GRATIS</div></div>
+      </div>
+      <div class="bono">
+        <div class="mock" style="background:linear-gradient(160deg,#16a34a,#14532d)">🗺️<small>LÍNEA DEL TIEMPO</small></div>
+        <div><div class="lbl">BONO #2</div><h3>Póster: Línea del tiempo de la humanidad</h3><p>Imprímelo y ponlo en tu pared: 300.000 años de historia en una sola imagen.</p><div class="val"><s>US$17</s> GRATIS</div></div>
+      </div>
+      <div class="bono">
+        <div class="mock" style="background:linear-gradient(160deg,#2563eb,#1e3a8a)">✏️<small>KIT FAMILIA Y AULA</small></div>
+        <div><div class="lbl">BONO #3</div><h3>Kit de actividades para familia y aula</h3><p>Preguntas, juegos y fichas para imprimir. Ideal para ver con tus hijos o usar en clase.</p><div class="val"><s>US$37</s> GRATIS</div></div>
+      </div>
+      <div class="bono">
+        <div class="mock" style="background:linear-gradient(160deg,#7c3aed,#3b0764)">🔒<small>EPISODIO SECRETO</small></div>
+        <div><div class="lbl">BONO #4</div><h3>Episodio secreto: “Lo que la ciencia aún no explica”</h3><p>Los misterios de la prehistoria que siguen sin respuesta. Solo para alumnos.</p><div class="val"><s>US$19</s> GRATIS</div></div>
+      </div>
+    </div>
+
+    <!-- BONO VIP (primeros 30) -->
+    <div class="vipbox" style="text-align:left">
+      <div class="vip-tag">👑 BONO VIP · ÚLTIMOS CUPOS DISPONIBLES</div>
+      <div class="vip-in">
+        <div class="vip-mock"><span>📜</span><small>HISTORIAS DE LA BIBLIA PARA NIÑOS</small><img class="real" src="img/biblia.jpg" alt="Historias de la Biblia para niños" onerror="this.remove()"></div>
+        <div>
+          <h3>Historias de la Biblia para niños</h3>
+          <p>Las historias más famosas de la Biblia contadas con nuestros personajes animados, en un lenguaje que los más pequeños entienden y no olvidan: <b>Noé y el arca, David y Goliat, Jonás y el gran pez, Moisés y el mar abierto</b> y muchas más.</p>
+          <ul>
+            <li>✨ Episodios animados cortos, perfectos para antes de dormir</li>
+            <li>🖍️ Dibujos para colorear de cada historia</li>
+            <li>❤️ La enseñanza de cada historia explicada para niños</li>
+          </ul>
+          <div class="cupo pocos" id="cupo">
+            <div class="cupo-txt"><span>⚠️ Bono limitado: cuando se acaben los cupos, desaparece de la página.</span><span class="alerta">¡Solo quedan <b class="cupos">3</b> cupos!</span></div>
+            <div class="asientos" id="asientos"></div>
+          </div>
+          <div class="val"><s>US$27</s> GRATIS solo para los próximos <span class="cupos">3</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA -->
+<section class="sec center" style="background:var(--gris)">
+  <div class="wrap">
+    <span class="kicker">Así de fácil</span>
+    <h2 class="h2">Así de fácil es asegurar tu lugar</h2>
+    <div class="pasos">
+      <div class="paso"><div class="i">1</div><h3>Haz tu pago</h3><p>Tarjeta, OXXO, PayPal y más. 100% seguro.</p></div>
+      <div class="paso"><div class="i">2</div><h3>Recibe tu acceso</h3><p>Recibes la confirmación al instante y tus primeros episodios en hasta 72 horas.</p></div>
+      <div class="paso"><div class="i">3</div><h3>Dale play</h3><p>En el celular, tablet o computadora. Para siempre.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CREADOR -->
+<section class="sec center">
+  <div class="wrap">
+    <span class="kicker">¿Quién está detrás?</span>
+    <h2 class="h2">Creado por la página que ya te cuenta estas historias todos los días</h2>
+    <div class="stats">
+      <div class="stat s1"><b>+10 M</b><span>de vistas</span></div>
+      <div class="stat s2"><b>~100 mil</b><span>seguidores</span></div>
+      <div class="stat s3"><b>1</b><span>video nuevo al día</span></div>
+    </div>
+    <p class="lead" style="margin-top:22px">Millones de personas ya se sorprendieron con nuestros videos cortos. Esta serie es lo que siempre nos pidieron: <b>la historia completa</b>.</p>
+  </div>
+</section>
+
+<!-- PARA QUIÉN -->
+<section class="sec center" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="h2">¿Para quién es esta serie?</h2>
+    <div class="grid-q">
+      <div class="q"><div class="ico">🤓</div><h3>Curiosos</h3><p>Si te encanta la historia y quieres saber de dónde venimos de verdad.</p></div>
+      <div class="q"><div class="ico">👨‍👩‍👧</div><h3>Padres</h3><p>Para ver en familia: tus hijos aprenden sin darse cuenta.</p></div>
+      <div class="q"><div class="ico">👩‍🏫</div><h3>Maestros</h3><p>Para dar clases de historia y ciencias que los alumnos no olvidan.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section class="sec oferta center" id="oferta">
+  <div class="wrap">
+    <span class="kicker">Oferta de lanzamiento</span>
+    <h2 class="h2">Todo lo que te llevas hoy</h2>
+    <div class="stack" style="text-align:left">
+      <div class="head">🎬 La Vida Secreta de los Humanos Antiguos</div>
+      <ul>
+        <li><span>🎞️ Serie completa: 10 temporadas · 36 episodios</span><span>US$97</span></li>
+        <li><span>📖 Bono 1: Atlas ilustrado (PDF)</span><span>US$27</span></li>
+        <li><span>🗺️ Bono 2: Póster línea del tiempo</span><span>US$17</span></li>
+        <li><span>✏️ Bono 3: Kit para familia y aula</span><span>US$37</span></li>
+        <li><span>🔒 Bono 4: Episodio secreto</span><span>US$19</span></li>
+        <li class="vip"><span>👑 Bono VIP: Historias de la Biblia para niños <em>(últimos cupos)</em></span><span>US$27</span></li>
+        <li><span>♾️ Acceso de por vida + actualizaciones</span><span>Incluido</span></li>
+      </ul>
+      <div class="total"><span>Valor total:</span><s>US$224</s></div>
+      <div class="precio-final">
+        <div class="hoy">HOY, TODO POR SOLO</div>
+        <div class="monto">US$27 <small>pago único</small></div>
+        <div class="ahorro">Ahorras US$197 (88% de descuento)</div><br>
+        <a class="btn xl" href="https://pay.hotmart.com/U107964329T">¡SÍ, QUIERO MI ACCESO AHORA!<small>Preventa · Garantía de 30 días</small></a>
+        <p class="pagos">🔒 Pago 100% seguro · 💳 Tarjeta · 🏪 OXXO · PayPal</p>
+        <p class="aviso">⚠️ Cuando termine el lanzamiento, el precio sube a US$47.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTÍA -->
+<section class="sec">
+  <div class="wrap">
+    <div class="gar">
+      <div class="sello30"><b>30</b><span>DÍAS DE GARANTÍA</span></div>
+      <div>
+        <h2>Riesgo cero para ti. Todo el riesgo es nuestro.</h2>
+        <p>Entra, mira todos los episodios, descarga los bonos. Si en 30 días sientes que no valió la pena, nos escribes y te devolvemos el 100% de tu dinero. Sin preguntas, sin letras pequeñas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec faq" style="background:var(--gris)">
+  <div class="wrap">
+    <h2 class="h2 center" style="margin-bottom:22px">Preguntas frecuentes</h2>
+    <details><summary>¿Son los mismos videos de la página?</summary><p>No. Los 36 episodios son inéditos y no se publican en la página. Son historias completas con temas nuevos.</p></details>
+    <details><summary>¿Cómo recibo el acceso?</summary><p>Justo después del pago recibes la confirmación por correo. Como es preventa de lanzamiento, tu área de miembros y los primeros episodios se liberan en hasta 72 horas, y el resto de las temporadas se va liberando semana a semana.</p></details>
+    <details><summary>¿Puedo verlo desde el celular?</summary><p>Sí. Celular, tablet o computadora, cuando quieras y las veces que quieras.</p></details>
+    <details><summary>¿Es apto para niños?</summary><p>Sí. Es contenido educativo y animado, perfecto para ver en familia.</p></details>
+    <details><summary>¿Lo puedo usar en mis clases?</summary><p>Sí. Además incluye un kit de actividades listo para imprimir.</p></details>
+    <details><summary>¿Es un pago mensual?</summary><p>No. Pagas una sola vez y el acceso es tuyo para siempre.</p></details>
+    <details><summary>¿Cómo sé si recibo el Bono VIP?</summary><p>Si compras mientras la página muestre cupos disponibles, el bono aparece automáticamente en tu área de miembros. Cuando se agoten, el bono se retira.</p></details>
+    <details><summary>¿Y si no me gusta?</summary><p>Tienes 30 días de garantía. Pides el reembolso y te devolvemos todo.</p></details>
+  </div>
+</section>
+
+<!-- CIERRE -->
+<section class="sec cierre">
+  <div class="wrap">
+    <h2>Tus antepasados sobrevivieron 300.000 años para que tú estuvieras aquí.</h2>
+    <p>Lo mínimo es conocer su verdadera historia. Empieza hoy por solo US$27.</p>
+    <a class="btn xl" href="https://pay.hotmart.com/U107964329T">¡QUIERO EMPEZAR AHORA!<small>Garantía de 30 días · Preventa</small></a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© Garabatos de la Historia 2026</span>
+    <nav><a href="#">Términos de uso</a><a href="#">Política de privacidad</a></nav>
+  </div>
+</footer>
+
+<div class="barra">
+  <div><s>US$224</s><b>US$27</b><br><small>Preventa de lanzamiento</small></div>
+  <a class="btn" href="https://pay.hotmart.com/U107964329T">¡LO QUIERO!</a>
+</div>
+
+<script>
+/* ====== CONTENIDO DEL CURSO (edite aquí) ====== */
+const T = [
+ {img:"img/t1.jpg", t:"El primer fuego", d:"Cómo un descubrimiento accidental cambió el destino de la humanidad.", bg:"bg3", p:"🔥",
+  e:["El rayo que lo cambió todo","Robar el fuego a la naturaleza","El primer fuego hecho a mano","La noche que dejó de dar miedo"]},
+ {img:"img/t2.jpg", t:"Antes de las palabras", d:"Cómo se comunicaban cuando todavía no existía el lenguaje.", bg:"bg4", p:"🗣️",
+  e:["Gestos, gritos y miradas","La primera palabra","Mensajes en piedra y hueso"]},
+ {img:"img/t3.jpg", t:"Los primeros médicos", d:"Curaban heridas, dientes… y hasta operaban el cráneo.", bg:"bg8", p:"🌿",
+  e:["Plantas que curaban","El dentista de la Edad de Piedra","La cirugía más antigua del mundo","Cuidar a los heridos"]},
+ {img:"img/t4.jpg", t:"Arte en la oscuridad", d:"Los secretos de las pinturas en las cuevas.", bg:"bg7", p:"🖐️",
+  e:["Manos en la pared","Los primeros dibujos animados","¿Qué querían decirnos?"]},
+ {img:"img/t5.jpg", t:"Tatuajes, joyas y moda", d:"La belleza y el estilo hace 40.000 años.", bg:"bg1", p:"📿",
+  e:["El hombre de hielo y sus 61 tatuajes","Collares de 100.000 años","Maquillaje prehistórico"]},
+ {img:"img/t6.jpg", t:"Leer las estrellas", d:"Calendarios, lunas y los primeros astrónomos.", bg:"bg5", p:"✨",
+  e:["El cielo como reloj","El primer calendario","Templos alineados con el sol","Las estrellas que guiaban viajes"]},
+ {img:"img/t7.jpg", t:"Amor en la Edad de Piedra", d:"Parejas, familias y cómo se elegían.", bg:"bg8", p:"🌸",
+  e:["Cómo se conquistaban","¿Parejas para toda la vida?","Las primeras bodas"]},
+ {img:"img/t8.jpg", t:"Inventos olvidados", d:"Tecnología genial que casi nadie conoce.", bg:"bg6", p:"🪡",
+  e:["La aguja que nos salvó del frío","El primer pegamento","El lanzador de lanzas","El arco y la flecha","La primera cuerda"]},
+ {img:"img/t9.jpg", t:"El día que casi desaparecimos", d:"Cuando quedaban tan pocos humanos que la especie estuvo a punto de extinguirse.", bg:"bg2", p:"🌋",
+  e:["El volcán que oscureció el cielo","Quedaban muy pocos","Cómo logramos sobrevivir"]},
+ {img:"img/t10.jpg", t:"La muerte y el más allá", d:"Qué creían que pasaba después de morir.", bg:"bg10", p:"🌙",
+  e:["Las primeras tumbas","Flores para los muertos","Los primeros dioses","El viaje al otro mundo"]}
+];
+
+function thumb(bg,p,n,fig,img){
+  const ep = img ? img.replace('.jpg', `-${n}.jpg`) : '';
+  const im = img ? `<img class="real" src="${ep}" data-alt="${img}" alt="" loading="lazy" onerror="if(this.dataset.alt){this.src=this.dataset.alt;this.dataset.alt=''}else{this.remove()}">` : '';
+  return `<div class="thumb ${bg}"><svg class="f" viewBox="0 0 200 260"><use href="#${fig}"/></svg><span class="prop">${p}</span>${im}<span class="n">Ep ${n}</span></div>`;
+}
+
+/* catálogo completo */
+const cat=document.getElementById('catalogo-lista');
+T.forEach((s,ti)=>{
+  let h=`<div class="temp ${ti>=3?'mas':''}"><div class="temp-h"><span class="t">TEMPORADA ${ti+1}</span><h3>${s.t}</h3><p>${s.d}</p></div><div class="cat-cards">`;
+  s.e.forEach((ep,i)=>{ h+=`<div class="card">${thumb(s.bg,s.p,i+1,i%2?'cav-wow':'cav',s.img)}<p>${ep}</p></div>`; });
+  cat.innerHTML+=h+`</div></div>`;
+});
+const total=T.reduce((a,s)=>a+s.e.length,0);
+document.querySelectorAll('.chip b')[1].textContent=total;
+const btn=document.getElementById('btn-ver'), sec=document.getElementById('catalogo');
+btn.onclick=()=>{sec.classList.toggle('abierto');btn.textContent=sec.classList.contains('abierto')?'Ver menos ▴':'Ver todas las temporadas ▾';};
+
+/* ====== CUPOS DEL BONO VIP: total de cupos y cuántos quedan (actualice a mano) ====== */
+const CUPOS_TOTALES = 3;
+const CUPOS_RESTANTES = 3;
+document.querySelectorAll('.cupos').forEach(e=>e.textContent=CUPOS_RESTANTES);
+const as=document.getElementById('asientos');
+for(let i=0;i<CUPOS_TOTALES;i++){const d=document.createElement('div');d.className='asiento'+(i<CUPOS_TOTALES-CUPOS_RESTANTES?' tomado':'');d.textContent=i<CUPOS_TOTALES-CUPOS_RESTANTES?'✔ Tomado':'🎁 Libre';as.appendChild(d);}
+</script>
+</body>
+</html>
